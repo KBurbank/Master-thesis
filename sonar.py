@@ -2,6 +2,7 @@
 from random import seed
 from random import randrange
 from csv import reader
+from numpy import exp
 
 # Load a CSV file
 def load_csv(filename):
@@ -45,11 +46,11 @@ def cross_validation_split(dataset, n_folds):
 
 # Calculate accuracy percentage
 def accuracy_metric(actual, predicted):
-	correct = 0
+	error = 0
 	for i in range(len(actual)):
-		if actual[i] == predicted[i]:
-			correct += 1
-	return correct / float(len(actual)) * 100.0
+			error += (actual[i] - predicted[i])*(actual[i] - predicted[i])
+	correct = 100 - error / float(len(actual)) * 100.0
+	return correct
 
 # Evaluate an algorithm using a cross validation split
 def evaluate_algorithm(dataset, algorithm, n_folds, *args):
@@ -75,7 +76,8 @@ def predict(row, weights):
 	activation = weights[0]
 	for i in range(len(row)-1):
 		activation += weights[i + 1] * row[i]
-	return 1.0 if activation >= 0.0 else 0.0
+		activation = 1/(1+exp(-(activation)))
+	return  activation
 
 # Estimate Perceptron weights using stochastic gradient descent
 def train_weights(train, l_rate, n_epoch):
@@ -86,7 +88,7 @@ def train_weights(train, l_rate, n_epoch):
 			error = row[-1] - prediction
 			weights[0] = weights[0] + l_rate * error
 			for i in range(len(row)-1):
-				weights[i + 1] = weights[i + 1] + l_rate * error * row[i]
+				weights[i + 1] = weights[i + 1] + l_rate * error*prediction*(1-prediction) * row[i]
 	return weights
 
 # Perceptron Algorithm With Stochastic Gradient Descent
