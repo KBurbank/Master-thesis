@@ -2,7 +2,12 @@
 from random import seed
 from random import randrange
 from csv import reader
+
+# In order to solve the overflow problem
 from numpy import exp
+import numpy
+with numpy.errstate(divide='ignore'):
+    numpy.float64(1.0) / 0.0
 
 # Load a CSV file
 def load_csv(filename):
@@ -49,6 +54,7 @@ def accuracy_metric(actual, predicted):
 	error = 0
 	for i in range(len(actual)):
 			error += (actual[i] - predicted[i])*(actual[i] - predicted[i])
+	# Changed a "correct" criterion for sigmoid function
 	correct = 100 - error / float(len(actual)) * 100.0
 	return correct
 
@@ -76,6 +82,7 @@ def predict(row, weights):
 	activation = weights[0]
 	for i in range(len(row)-1):
 		activation += weights[i + 1] * row[i]
+		# Now variable activation is realy the output of activation function
 		activation = 1/(1+exp(-(activation)))
 	return  activation
 
@@ -88,6 +95,8 @@ def train_weights(train, l_rate, n_epoch):
 			error = row[-1] - prediction
 			weights[0] = weights[0] + l_rate * error
 			for i in range(len(row)-1):
+				# Gradient of activation function is added
+				# Gradient of activation function is added
 				weights[i + 1] = weights[i + 1] + l_rate * error*prediction*(1-prediction) * row[i]
 	return weights
 
