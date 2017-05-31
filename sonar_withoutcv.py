@@ -2,7 +2,7 @@ from csv import reader
 from numpy import *
 import numpy as np
 #np.seterr(all='ignore')
-from random import *
+import random as rd
 
 ##### Preparing dataset #####
 
@@ -52,7 +52,7 @@ n_epoch = 1000  		  # Number of iterations
 l_hidden_layer = 61  # Number of neurons in hidden layer
 
 # Training weights
-seed(1)
+np.random.seed(2)
 weights1 = 2*np.random.random((l_hidden_layer, len(dataset[0, :])-1)) -1  # Mean zero
 #bias1 = 2*np.random.random((l_hidden_layer, len(dataset[:,0])))-1
 bias1 = np.zeros((1, len(dataset[:,0])))
