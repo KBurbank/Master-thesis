@@ -55,10 +55,8 @@ l_hidden_layer = 61  # Number of neurons in hidden layer
 np.random.seed(222)
 # Mean zero; The reason why I devide the whole term by 100 is that the weights were too big for this dataset.
 weights1 = (2*np.random.random((l_hidden_layer, len(dataset[0, :])-1)) -1)/100
-#bias1 = 2*np.random.random((l_hidden_layer, len(dataset[:,0])))-1
 bias1 = np.zeros((1, len(dataset[:,0])))
 weights2 = (2*np.random.random((1, l_hidden_layer))-1)/100
-#bias2 = 2*np.random.random((1, len(dataset[:,0])))-1
 bias2 = np.zeros((1, len(dataset[:,0])))
 
 for epoch in range(n_epoch):
