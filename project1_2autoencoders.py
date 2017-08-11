@@ -59,7 +59,8 @@ print(sess.run(accuracy, feed_dict={x: mnist.test.images,
                                     y_: mnist.test.labels}))
 
 # visualize filters
-pixels = W1_en[:,208].eval() # convert tensor to array
-pixels = pixels.reshape((28, 28))
-imshow(pixels, cmap = 'winter')
-show()
+if False:
+    pixels = W1_en[:,208].eval() # convert tensor to array
+    pixels = pixels.reshape((28, 28))
+    imshow(pixels, cmap = 'winter')
+    show()
