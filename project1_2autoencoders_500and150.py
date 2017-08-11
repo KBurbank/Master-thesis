@@ -32,8 +32,8 @@ loss2 = tf.reduce_mean(tf.square(tf.nn.sigmoid(tf.matmul(h2, W2_de)+b2_de) - h1)
 loss3 = tf.reduce_mean(
       tf.nn.softmax_cross_entropy_with_logits(labels=y_, logits=y))
 
-train_step1 = tf.train.GradientDescentOptimizer(0.05).minimize(loss1, var_list=[W1_en, b1_en, W1_de, b1_de])
-train_step2 = tf.train.GradientDescentOptimizer(0.05).minimize(loss2, var_list=[W2_en, b2_en, W2_de, b2_de])
+train_step1 = tf.train.GradientDescentOptimizer(10).minimize(loss1, var_list=[W1_en, b1_en, W1_de, b1_de])
+train_step2 = tf.train.GradientDescentOptimizer(10).minimize(loss2, var_list=[W2_en, b2_en, W2_de, b2_de])
 train_step3 = tf.train.GradientDescentOptimizer(0.5).minimize(loss3, var_list=[W3, b3])
 
 sess = tf.InteractiveSession()
