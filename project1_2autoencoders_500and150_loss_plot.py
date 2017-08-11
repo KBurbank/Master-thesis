@@ -13,12 +13,12 @@ x = tf.placeholder(tf.float32, [None, 784])  # Input layer
 y_ = tf.placeholder(tf.float32, [None, 10])  # True values for output layer
 W1_en = tf.Variable(tf.truncated_normal([784, 500], stddev = 0.1, seed = 123)) # encoder step
 b1_en = tf.Variable(tf.zeros([500]))
-W1_de = tf.Variable(tf.truncated_normal([500, 784], stddev = 0.1, seed = 123)) # decoder step
+W1_de = tf.transpose(W1_en) # decoder step
 b1_de = tf.Variable(tf.zeros([784]))
 
 W2_en = tf.Variable(tf.truncated_normal([500, 150], stddev = 0.1, seed = 123)) # encoder step
 b2_en = tf.Variable(tf.zeros([150]))
-W2_de = tf.Variable(tf.truncated_normal([150, 500], stddev = 0.1, seed = 123)) # decoder step
+W2_de = tf.transpose(W2_en) # decoder step
 b2_de = tf.Variable(tf.zeros([500]))
 
 W3 = tf.Variable(tf.truncated_normal([150, 10], stddev=0.1, seed = 123))
@@ -33,8 +33,8 @@ loss2 = tf.reduce_mean(tf.square(tf.nn.sigmoid(tf.matmul(h2, W2_de)+b2_de) - h1)
 loss3 = tf.reduce_mean(
       tf.nn.softmax_cross_entropy_with_logits(labels=y_, logits=y))
 
-train_step1 = tf.train.GradientDescentOptimizer(10).minimize(loss1, var_list=[W1_en, b1_en, W1_de, b1_de])
-train_step2 = tf.train.GradientDescentOptimizer(0.05).minimize(loss2, var_list=[W2_en, b2_en, W2_de, b2_de])
+train_step1 = tf.train.GradientDescentOptimizer(10).minimize(loss1, var_list=[W1_en, b1_en, b1_de])
+train_step2 = tf.train.GradientDescentOptimizer(10).minimize(loss2, var_list=[W2_en, b2_en, b2_de])
 train_step3 = tf.train.GradientDescentOptimizer(0.5).minimize(loss3, var_list=[W3, b3])
 
 sess = tf.InteractiveSession()
