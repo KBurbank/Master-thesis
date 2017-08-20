@@ -1,0 +1,9 @@
+num_input = 784 # Number of neurons in input layer
+num_hidden1 = 500 # Number of neurons in hidden layer 1
+num_hidden2 = 150 # Number of neurons in hidden layer 2
+num_output = 10 # Number of neurons in output layer
+iteration = 1000 # Number of iterations in training step 1 2 3
+batch_size = 100 # Number of inputs in one batch
+learning_rate1 = 10
+learning_rate2 = 10
+learning_rate3 = 0.5
