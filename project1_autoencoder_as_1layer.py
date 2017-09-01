@@ -22,7 +22,11 @@ b2 = tf.Variable(tf.zeros([10]))
 h = tf.nn.sigmoid(tf.matmul(x, W1e) + b1e) # hidden layer
 y = tf.matmul(h, W2) + b2
 
-loss1 = tf.reduce_sum(tf.square(tf.nn.sigmoid(tf.matmul(h, tf.transpose(W1e))+b1d) - x))
+rho = tf.constant(0.50, shape = [1, 100])
+sparsity = 0 # set to 0 to exclude sparsity loss; set to 1 to include
+beta = tf.constant(5e-8*sparsity)
+kl_div_loss1 = tf.reduce_sum(-tf.nn.softmax_cross_entropy_with_logits(labels = rho, logits = rho/tf.reduce_mean(h,0)))
+loss1 = tf.reduce_sum(tf.square(tf.nn.sigmoid(tf.matmul(h, tf.transpose(W1e))+b1d) - x))+beta * kl_div_loss1
 loss2 = tf.reduce_mean(
       tf.nn.softmax_cross_entropy_with_logits(labels=y_, logits=y))
 
@@ -54,5 +58,5 @@ for i in range(100):
     plt.subplot(10, 10, i+1)
     plt.imshow(pixels, cmap = 'winter')
     plt.axis('off')
-    
+
 
