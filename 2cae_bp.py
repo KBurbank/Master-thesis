@@ -70,7 +70,35 @@ loss3 = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=y_, logits
 train_step1 = tf.train.GradientDescentOptimizer(0.5).minimize(loss1, var_list=[W_conv1, b_conv1, b_conv1_de])
 train_step2 = tf.train.GradientDescentOptimizer(0.5).minimize(loss2, var_list = [W_conv2, b_conv2, b_conv2_de])
 train_step3 = tf.train.GradientDescentOptimizer(0.5).minimize(loss3, var_list = [W_fc1, b_fc1])
-train_step4 = tf.train.GradientDescentOptimizer(1e-4).minimize(loss3)
+#train_step4 = tf.train.GradientDescentOptimizer(1e-2).minimize(loss3) # Need to be changed to be safe for not doing
+# initialization again
+
+#parellel network
+W_conv1_prime = W_conv1
+b_conv1_prime = b_conv1
+b_conv1_de_prime = b_conv1_de
+
+h_conv1_prime = tf.nn.relu(conv2d(x_image, W_conv1_prime) + b_conv1_prime)
+h_pool1_prime = max_pool_2x2(h_conv1_prime)
+
+W_conv2_prime = W_conv2
+b_conv2_prime = b_conv2
+b_conv2_de_prime = b_conv2_de
+
+h_conv2_prime = tf.nn.relu(conv2d(h_pool1_prime, W_conv2_prime)+b_conv2_prime)
+h_pool2_prime = max_pool_2x2(h_conv2_prime)
+
+W_fc1_prime = W_fc1
+b_fc1_prime = b_fc1
+
+h_pool2_prime_flat = tf.reshape(h_pool2_prime, [-1, 7*7*num_filter2])
+y_prime = tf.matmul(h_pool2_prime_flat, W_fc1_prime)+b_fc1_prime
+
+loss4 = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=y_, logits=y_prime))
+
+train_step4 = tf.train.GradientDescentOptimizer(1e-2).minimize(loss4, var_list = [W_conv1_prime, b_conv1_prime,
+                                                                                   W_conv2_prime, b_conv2_prime,
+                                                                                   W_fc1_prime, b_fc1_prime])
 
 sess = tf.InteractiveSession()
 sess.run(tf.global_variables_initializer())
@@ -95,6 +123,5 @@ for _ in range(1000):
 # Test trained model
 correct_prediction=tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
-print(sess.run(accuracy, feed_dict={x: mnist.test.images,
-                                    y_: mnist.test.labels}))
-
+print(sess.run(accuracy, feed_dict={x: mnist.test.images[0:1000, :],
+                                    y_: mnist.test.labels[0:1000, :]}))
