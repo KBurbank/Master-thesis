@@ -1,0 +1,19 @@
+\chapter{Conclusions} % Main chapter title
+
+\label{Chapter 5} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
+
+
+
+As can be seen from table \ref{tab:summary_acc}, error backpropagation is a powerful algorithm especially when the network is small. For small networks, error backpropagation can do a significantly better job than layer-wise training process, where the accuracy is 98.68\% to 93.32\%. Compared with error backpropagation, layer-wise pre-training process helps increase the accuracy by 0.26\%, which is a noticeable improvement in the field of machine learning. For enlarged networks, the accuracy of layer-wise training process is 97.65\%, which is a decent performance for the algorithm commonly used only for pre-training process. Error backpropagation algorithm still performs well in enlarged networks, whose accuracy remains high around 99.2\% with or without pre-training process. 
+
+As can be seen in figure \ref{fig:enlarged_net_accu_plot_combined}, combined with error backpropagation, layer-wise pre-training process empowers the network a jump start since the accuracy after 10 training batches is 54.42\%. No jump start is found in regular networks. Layer-wise pre-training shows it potential in search for good initial values especially for large networks. 
+
+As can be seen from the filters from regular networks in figure \ref{fig:filters}, when the number of filters is small, filters in convolutional autoencoders tend to keep as much information as possible from inputs. Useless features preserved by convolutional autoencoder cause eventual distraction. Convolutional autoencoder with large number of filters has more filter capital so a few of them are automatically assigned for specific features like a curve in a small region, which improves the accuracy. 
+
+
+
+Convolutional autoencoders with large numbers of filters achieve decent performance in digit recognition, which is an indicator that convolutional autoencoders can work more than pre-training process. Although they haven't achieved outstanding performance in digit recognition, great potential is shown since when numbers of filters are increased the performance of convolutional autoencoders increase greatly. Without using error backpropagation algorithm, convolutional autoencoders are biologically plausible. 
+
+Since convolutional autoencoders are capable of finding good initial values for the network, they may be more useful in complicated tasks like image and video recognition where large networks are expected. 
+
+Like human brains are not only designed for digit recognition, we believe studying autoencoder loss function opens the door for an overall more comprehensive neural network model. 

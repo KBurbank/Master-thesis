@@ -1,0 +1,502 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.5 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{burbank_understanding_2011}{book}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Burbank}{B.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Kreiman}{K.}%
+     {G.}{G.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {MIT Press}%
+  }
+  \strng{namehash}{BKG1}
+  \strng{fullhash}{BKG1}
+  \field{sortinit}{B}
+  \field{title}{Understanding {Visual} {Population} {Codes}}
+  \list{location}{1}{%
+    {Cambridge, MA}%
+  }
+  \verb{file}
+  \verb Introduction to the Anatomy and Function of Visual Cortex | Kreiman Lab
+  \verb oratory:C\:\\Users\\Veblen\\Zotero\\storage\\AIGNHFGI\\introduction-ana
+  \verb tomy-and-function-visual-cortex.html:text/html
+  \endverb
+  \field{year}{2011}
+\endentry
+
+\entry{burbank_mirrored_2015}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Burbank}{B.}%
+     {Kendra~S.}{K.~S.}%
+     {}{}%
+     {}{}}%
+  }
+  \name{editor}{1}{}{%
+    {{}%
+     {Graham}{G.}%
+     {Lyle~J.}{L.~J.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {en}%
+  }
+  \strng{namehash}{BKS1}
+  \strng{fullhash}{BKS1}
+  \field{sortinit}{B}
+  \verb{doi}
+  \verb 10.1371/journal.pcbi.1004566
+  \endverb
+  \field{issn}{1553-7358}
+  \field{number}{12}
+  \field{pages}{e1004566}
+  \field{title}{Mirrored {STDP} {Implements} {Autoencoder} {Learning} in a
+  {Network} of {Spiking} {Neurons}}
+  \verb{url}
+  \verb http://dx.plos.org/10.1371/journal.pcbi.1004566
+  \endverb
+  \field{volume}{11}
+  \field{journaltitle}{PLOS Computational Biology}
+  \field{month}{12}
+  \field{year}{2015}
+  \field{urlday}{27}
+  \field{urlmonth}{09}
+  \field{urlyear}{2017}
+\endentry
+
+\entry{fukushima_neocognitron:_1982}{incollection}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Fukushima}{F.}%
+     {Kunihiko}{K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Miyake}{M.}%
+     {Sei}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {en}%
+  }
+  \list{publisher}{1}{%
+    {Springer, Berlin, Heidelberg}%
+  }
+  \strng{namehash}{FKMS1}
+  \strng{fullhash}{FKMS1}
+  \field{sortinit}{F}
+  \field{abstract}{%
+  A neural network model, called a “neocognitron”, is proposed for a
+  mechanism of visual pattern recognition. It is demonstrated by computer
+  simulation that the neocognitron has characteristics similar to those of
+  visual systems of vertebrates.The neocognitron is a multilayered network
+  consisting of a cascade connection of many layers of cells, and the
+  efficiencies of the synaptic connections between cells are modifiable.
+  Self-organization of the network progresses by means of
+  “learning-without-a-teacher” process: Only repetitive presentation of a
+  set of stimulus patterns is necessary for the self-organization of the
+  network, and no information about the categories to which these patterns
+  should be classified is needed. The neocognitron by itself acquires the
+  ability to classify and correctly recognize these patterns according to the
+  differences in their shapes: Any patterns which we human beings judge to be
+  alike are also judged to be of the same category by the neocognitron. The
+  neocognitron recognizes stimulus patterns correctly without being affected by
+  shifts in position or even by considerable distortions in shape of the
+  stimulus patterns. If a stimulus pattern is presented at a different position
+  or if the shape of the pattern is distorted, the responses of the cells in
+  the intermediate layers, especially the ones near the input layer, vary with
+  the shift in position or the distortion in shape of the pattern. However, the
+  deeper the layer is, the smaller become the variations in cellular responses.
+  Thus, the cells of the deepest layer of the network are not affected by the
+  shift in position or the distortion in shape of the stimulus pattern.%
+  }
+  \field{booktitle}{Competition and {Cooperation} in {Neural} {Nets}}
+  \field{isbn}{978-3-540-11574-8 978-3-642-46466-9}
+  \field{note}{DOI: 10.1007/978-3-642-46466-9\_18}
+  \field{pages}{267\bibrangedash 285}
+  \field{series}{Lecture {Notes} in {Biomathematics}}
+  \field{shorttitle}{Neocognitron}
+  \field{title}{Neocognitron: {A} {Self}-{Organizing} {Neural} {Network}
+  {Model} for a {Mechanism} of {Visual} {Pattern} {Recognition}}
+  \verb{url}
+  \verb https://link.springer.com/chapter/10.1007/978-3-642-46466-9_18
+  \endverb
+  \verb{file}
+  \verb Snapshot:C\:\\Users\\Veblen\\Zotero\\storage\\LNM8NJLY\\978-3-642-46466
+  \verb -9_18.html:text/html
+  \endverb
+  \field{year}{1982}
+  \field{urlday}{04}
+  \field{urlmonth}{10}
+  \field{urlyear}{2017}
+\endentry
+
+\entry{hinton_reducing_2006}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Hinton}{H.}%
+     {G.~E.}{G.~E.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Salakhutdinov}{S.}%
+     {R.~R.}{R.~R.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {en}%
+  }
+  \strng{namehash}{HGESRR1}
+  \strng{fullhash}{HGESRR1}
+  \field{sortinit}{H}
+  \field{abstract}{%
+  High-dimensional data can be converted to low-dimensional codes by training a
+  multilayer neural network with a small central layer to reconstruct
+  high-dimensional input vectors. Gradient descent can be used for fine-tuning
+  the weights in such “autoencoder” networks, but this works well only if
+  the initial weights are close to a good solution. We describe an effective
+  way of initializing the weights that allows deep autoencoder networks to
+  learn low-dimensional codes that work much better than principal components
+  analysis as a tool to reduce the dimensionality of data. Neural networks can
+  be used to reduce accurately high-dimensional data to lower dimensional
+  representations for pattern recognition tasks. Neural networks can be used to
+  reduce accurately high-dimensional data to lower dimensional representations
+  for pattern recognition tasks.%
+  }
+  \verb{doi}
+  \verb 10.1126/science.1127647
+  \endverb
+  \field{issn}{0036-8075, 1095-9203}
+  \field{number}{5786}
+  \field{pages}{504\bibrangedash 507}
+  \field{title}{Reducing the {Dimensionality} of {Data} with {Neural}
+  {Networks}}
+  \verb{url}
+  \verb http://science.sciencemag.org/content/313/5786/504
+  \endverb
+  \field{volume}{313}
+  \verb{file}
+  \verb Full Text PDF:C\:\\Users\\Veblen\\Zotero\\storage\\NWGYJU2B\\Hinton and
+  \verb  Salakhutdinov - 2006 - Reducing the Dimensionality of Data with Neural
+  \verb  Ne.pdf:application/pdf;Snapshot:C\:\\Users\\Veblen\\Zotero\\storage\\3
+  \verb 2DASDNR\\504.html:text/html
+  \endverb
+  \field{journaltitle}{Science}
+  \field{month}{07}
+  \field{year}{2006}
+  \field{urlday}{06}
+  \field{urlmonth}{10}
+  \field{urlyear}{2017}
+\endentry
+
+\entry{ji_3d_2013}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Ji}{J.}%
+     {Shuiwang}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Yang}{Y.}%
+     {Ming}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Yu}{Y.}%
+     {Kai}{K.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {eng}%
+  }
+  \keyw{Algorithms, Decision Support Techniques, Image Interpretation,
+  Computer-Assisted, Imaging, Three-Dimensional, Movement, Neural Networks
+  (Computer), Pattern Recognition, Automated, Subtraction Technique}
+  \strng{namehash}{JSYMYK1}
+  \strng{fullhash}{JSYMYK1}
+  \field{sortinit}{J}
+  \field{abstract}{%
+  We consider the automated recognition of human actions in surveillance
+  videos. Most current methods build classifiers based on complex handcrafted
+  features computed from the raw inputs. Convolutional neural networks (CNNs)
+  are a type of deep model that can act directly on the raw inputs. However,
+  such models are currently limited to handling 2D inputs. In this paper, we
+  develop a novel 3D CNN model for action recognition. This model extracts
+  features from both the spatial and the temporal dimensions by performing 3D
+  convolutions, thereby capturing the motion information encoded in multiple
+  adjacent frames. The developed model generates multiple channels of
+  information from the input frames, and the final feature representation
+  combines information from all channels. To further boost the performance, we
+  propose regularizing the outputs with high-level features and combining the
+  predictions of a variety of different models. We apply the developed models
+  to recognize human actions in the real-world environment of airport
+  surveillance videos, and they achieve superior performance in comparison to
+  baseline methods.%
+  }
+  \verb{doi}
+  \verb 10.1109/TPAMI.2012.59
+  \endverb
+  \field{issn}{1939-3539}
+  \field{number}{1}
+  \field{pages}{221\bibrangedash 231}
+  \field{title}{3D convolutional neural networks for human action recognition}
+  \field{volume}{35}
+  \field{journaltitle}{IEEE transactions on pattern analysis and machine
+  intelligence}
+  \field{month}{01}
+  \field{year}{2013}
+\endentry
+
+\entry{lecun_gradient-based_1998}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Lecun}{L.}%
+     {Y.}{Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Bottou}{B.}%
+     {L.}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Bengio}{B.}%
+     {Y.}{Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Haffner}{H.}%
+     {P.}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{2D shape variability, back-propagation, backpropagation, Character
+  recognition, cheque reading, complex decision surface synthesis, convolution,
+  convolutional neural network character recognizers, document recognition,
+  document recognition systems, Feature extraction, field extraction, gradient
+  based learning technique, gradient-based learning, graph transformer
+  networks, GTN, handwritten character recognition, handwritten digit
+  recognition task, Hidden Markov models, high-dimensional patterns, language
+  modeling, Machine learning, Multi-layer neural network, multilayer neural
+  networks, multilayer perceptrons, multimodule systems, Neural networks,
+  optical character recognition, Optical character recognition software,
+  Optical computing, Pattern recognition, performance measure minimization,
+  Principal component analysis, segmentation recognition}
+  \strng{namehash}{LY+1}
+  \strng{fullhash}{LYBLBYHP1}
+  \field{sortinit}{L}
+  \field{abstract}{%
+  Multilayer neural networks trained with the back-propagation algorithm
+  constitute the best example of a successful gradient based learning
+  technique. Given an appropriate network architecture, gradient-based learning
+  algorithms can be used to synthesize a complex decision surface that can
+  classify high-dimensional patterns, such as handwritten characters, with
+  minimal preprocessing. This paper reviews various methods applied to
+  handwritten character recognition and compares them on a standard handwritten
+  digit recognition task. Convolutional neural networks, which are specifically
+  designed to deal with the variability of 2D shapes, are shown to outperform
+  all other techniques. Real-life document recognition systems are composed of
+  multiple modules including field extraction, segmentation recognition, and
+  language modeling. A new learning paradigm, called graph transformer networks
+  (GTN), allows such multimodule systems to be trained globally using
+  gradient-based methods so as to minimize an overall performance measure. Two
+  systems for online handwriting recognition are described. Experiments
+  demonstrate the advantage of global training, and the flexibility of graph
+  transformer networks. A graph transformer network for reading a bank cheque
+  is also described. It uses convolutional neural network character recognizers
+  combined with global training techniques to provide record accuracy on
+  business and personal cheques. It is deployed commercially and reads several
+  million cheques per day%
+  }
+  \verb{doi}
+  \verb 10.1109/5.726791
+  \endverb
+  \field{issn}{0018-9219}
+  \field{number}{11}
+  \field{pages}{2278\bibrangedash 2324}
+  \field{title}{Gradient-based learning applied to document recognition}
+  \field{volume}{86}
+  \verb{file}
+  \verb IEEE Xplore Abstract Record:C\:\\Users\\Veblen\\Zotero\\storage\\ZG7P75
+  \verb B3\\726791.html:text/html;IEEE Xplore Full Text PDF:C\:\\Users\\Veblen\
+  \verb \Zotero\\storage\\LNXCIG52\\Lecun et al. - 1998 - Gradient-based learni
+  \verb ng applied to document recogn.pdf:application/pdf
+  \endverb
+  \field{journaltitle}{Proceedings of the IEEE}
+  \field{month}{11}
+  \field{year}{1998}
+\endentry
+
+\entry{masci_stacked_2011}{inproceedings}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Masci}{M.}%
+     {Jonathan}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Meier}{M.}%
+     {Ueli}{U.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Cireşan}{C.}%
+     {Dan}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Schmidhuber}{S.}%
+     {Jürgen}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {en}%
+  }
+  \list{publisher}{1}{%
+    {Springer, Berlin, Heidelberg}%
+  }
+  \strng{namehash}{MJ+1}
+  \strng{fullhash}{MJMUCDSJ1}
+  \field{sortinit}{M}
+  \field{abstract}{%
+  We present a novel convolutional auto-encoder (CAE) for unsupervised feature
+  learning. A stack of CAEs forms a convolutional neural network (CNN). Each
+  CAE is trained using conventional on-line gradient descent without additional
+  regularization terms. A max-pooling layer is essential to learn biologically
+  plausible features consistent with those found by previous approaches.
+  Initializing a CNN with filters of a trained CAE stack yields superior
+  performance on a digit (MNIST) and an object recognition (CIFAR10)
+  benchmark.%
+  }
+  \field{booktitle}{Artificial {Neural} {Networks} and {Machine} {Learning} –
+  {ICANN} 2011}
+  \verb{doi}
+  \verb 10.1007/978-3-642-21735-7_7
+  \endverb
+  \field{isbn}{978-3-642-21734-0 978-3-642-21735-7}
+  \field{pages}{52\bibrangedash 59}
+  \field{series}{Lecture {Notes} in {Computer} {Science}}
+  \field{title}{Stacked {Convolutional} {Auto}-{Encoders} for {Hierarchical}
+  {Feature} {Extraction}}
+  \verb{url}
+  \verb https://link.springer.com/chapter/10.1007/978-3-642-21735-7_7
+  \endverb
+  \verb{file}
+  \verb Full Text PDF:C\:\\Users\\Veblen\\Zotero\\storage\\GBMX3N5L\\Masci et a
+  \verb l. - 2011 - Stacked Convolutional Auto-Encoders for Hierarchic.pdf:appl
+  \verb ication/pdf;Snapshot:C\:\\Users\\Veblen\\Zotero\\storage\\NDI3IPTP\\10.
+  \verb html:text/html
+  \endverb
+  \field{month}{06}
+  \field{year}{2011}
+  \field{urlday}{04}
+  \field{urlmonth}{10}
+  \field{urlyear}{2017}
+\endentry
+
+\entry{noauthor_mnist_nodate}{misc}{}
+  \field{sortinit}{M}
+  \field{title}{{MNIST} handwritten digit database, {Yann} {LeCun}, {Corinna}
+  {Cortes} and {Chris} {Burges}}
+  \verb{url}
+  \verb http://yann.lecun.com/exdb/mnist/
+  \endverb
+  \verb{file}
+  \verb MNIST handwritten digit database, Yann LeCun, Corinna Cortes and Chris
+  \verb Burges:C\:\\Users\\Veblen\\Zotero\\storage\\FY5MWAIQ\\mnist.html:text/h
+  \verb tml
+  \endverb
+  \field{urlday}{12}
+  \field{urlmonth}{11}
+  \field{urlyear}{2017}
+\endentry
+
+\entry{rumelhart_learning_1985}{report}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Rumelhart}{R.}%
+     {David~E.}{D.~E.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hinton}{H.}%
+     {Geoffrey~E.}{G.~E.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Williams}{W.}%
+     {Ronald~J.}{R.~J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{RDEHGEWRJ1}
+  \strng{fullhash}{RDEHGEWRJ1}
+  \field{sortinit}{R}
+  \field{abstract}{%
+  This paper presents a generalization of the perception learning procedure for
+  learning the correct sets of connections for arbitrary networks. The rule,
+  falled the generalized delta rule, is a simple scheme for implementing a
+  gradient descent method for finding weights that minimize the sum squared
+  error of the sytem's performance. The major theoretical contribution of the
+  work is the procedure called error propagation, whereby the gradient can be
+  determined by individual units of the network based only on locally available
+  information. The major empirical contribution of the work is to show that the
+  problem of local minima not serious in this application of gradient descent.
+  Keywords: Learning; networks; Perceptrons; Adaptive systems; Learning
+  machines; and Back propagation.%
+  }
+  \field{number}{ICS-8506}
+  \field{title}{Learning {Internal} {Representations} by {Error} {Propagation}}
+  \verb{url}
+  \verb http://www.dtic.mil/docs/citations/ADA164453
+  \endverb
+  \list{institution}{1}{%
+    {CALIFORNIA UNIV SAN DIEGO LA JOLLA INST FOR COGNITIVE SCIENCE, CALIFORNIA
+  UNIV SAN DIEGO LA JOLLA INST FOR COGNITIVE SCIENCE}%
+  }
+  \verb{file}
+  \verb Full Text PDF:C\:\\Users\\Veblen\\Zotero\\storage\\PI9M9RIV\\Rumelhart
+  \verb et al. - 1985 - Learning Internal Representations by Error Propaga.pdf:
+  \verb application/pdf;Snapshot:C\:\\Users\\Veblen\\Zotero\\storage\\PGYGEM2T\
+  \verb \ADA164453.html:text/html
+  \endverb
+  \field{type}{techreport}
+  \field{month}{09}
+  \field{year}{1985}
+  \field{urlday}{12}
+  \field{urlmonth}{11}
+  \field{urlyear}{2017}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

@@ -1,0 +1,12 @@
+\chapter{Introduction} % Main chapter title
+
+\label{Chapter 1} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
+
+Autoencoders [CITATIONS HERE] and convolutional autoencoders [MORE CITATIONS HERE] \cite{masci_stacked_2011} are neural networks which are trained in an unsupervised, layerwise manner to be able to reproduce their own inputs. In doing so, they can learn efficient representations of the input data. Autoencoder learning has been used as an initial pre-training step for deep belief networks \cite{hinton_reducing_2006}, where autoencoder learning is followed by a fine-tuning step with conventional backpropagation training. However,  relatively little is known about the performance of autoencoder networks without the final backpropagation step.
+
+Recently, a biologically plausible model for autoencoder learning in the brain has been proposed \cite{burbank_mirrored_2015}. Here, we investigate whether such a biologically plausible autoencoder network, stacked with a fully connected classification layer, can perform well at a standard visual classification task. Because biologically plausible models of backpropagation have not been proposed, we wanted to see if autoencoder training alone would suffice for the training of the early layers in a visual recognition network.
+
+
+We propose here a stacked convolutional autoencoder architecture called PanNet. We compare the performance of our network with that of the well-known network LeNet-1 \cite{lecun_gradient-based_1998}, which is trained with error backpropagation across the whole network and no pre-training. We finally investigate the effect of backpropagation itself by adding a fine-tuning step after autoencoder learning, in a network we call backPanNet.
+
+While the performance of the autoencoder-only network unsurprisingly does not match that of networks trained with backpropagation, we argue that it nevertheless does surprisingly well, and conclude that autoencoder learning may be a viable model for the training of neuronal connections in biological brains.
